@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{% url 'registroPersona/crearPersona' %}" method="POST">
+                    <form action="{ % url 'registroPersona/crearPersona' % }" method="POST">
                         {% csrf_token %}
 
                         <div class="row">
@@ -52,8 +52,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="run" id="run" placeholder="Ingrese run"
-                                        onkeypress="return validarRun(event)">
+                                    <input required class="form-control" type="text" name="run" id="run" placeholder="Ingrese run" onkeypress="return validarRun(event)">
                                 </div>
                             </div>
 
@@ -69,8 +68,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="nombre" placeholder="Ingrese nombre completo"
-                                        onkeypress="return validarLetras(event)">
+                                    <input required class="form-control" type="text" name="nombre" placeholder="Ingrese nombre completo" onkeypress="return validarLetras(event)">
                                 </div>
                             </div>
 
@@ -81,8 +79,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="nacimiento" id="nacimiento"
-                                        placeholder="dd/mm/aaaa">
+                                    <input required class="form-control" type="text" name="nacimiento" id="nacimiento" placeholder="dd/mm/aaaa">
                                 </div>
                             </div>
 
@@ -109,8 +106,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="username" id="username"
-                                        placeholder="Ingrese usuario">
+                                    <input required class="form-control" type="text" name="username" id="username" placeholder="Ingrese usuario">
                                 </div>
                             </div>
 
@@ -128,8 +124,7 @@
                                             <i class="fas fa-key"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="password" name="password" id="password"
-                                        placeholder="Ingrese contraseña">
+                                    <input required class="form-control" type="password" name="password" id="password" placeholder="Ingrese contraseña">
                                 </div>
                             </div>
 
@@ -140,8 +135,7 @@
                                             <i class="fas fa-key"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="password" name="repassword" id="repassword"
-                                        placeholder="Confirme contraseña">
+                                    <input required class="form-control" type="password" name="repassword" id="repassword" placeholder="Confirme contraseña">
                                 </div>
                             </div>
 
@@ -176,7 +170,7 @@
                             </div>
 
                         </div>
-                         
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="input-group form-group">
