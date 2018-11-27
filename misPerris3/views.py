@@ -32,7 +32,7 @@ def crearPersona(request):
     persona = Persona(run=run ,correo=correo ,nombre=nombre ,fechaNac=fechaNac ,telefono=telefono ,nombreUsuario=nombreUsuario ,contraseñaUsuario=contraseñaUsuario ,region=region ,comuna=comuna ,vivienda=vivienda )
     persona.save()
 <<<<<<< HEAD
-    return HttpResponse("run : "+run+" correo : "+correo+" nombre : "+nombre+" fechaNac : "+fechaNac+" telefono : "+telefono+" nombreUsuario : "+nombreUsuario+" contraseñaUsuario : "+contraseñaUsuario+" region : "+region+" comuna : "+region+" vivienda : "+region)
+    return HttpResponse("run : "+run+" correo : "+correo+" nombre : "+nombre+" fechaNac : "+fechaNac+" telefono : "+telefono+" nombreUsuario : "+nombreUsuario+" contraseñaUsuario : "+contraseñaUsuario+" region : "+region+" comuna : "+comuna+" vivienda : "+vivienda)
 =======
 
     user = User.objects.create_user(nombreUsuario, correo, repassword)
