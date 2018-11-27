@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{% static 'css/estilo_login.css' %}">
     <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
 
-    <title>Registro</title>
+    <title>Iniciar Sesion</title>
 </head>
 
 <body>
@@ -29,7 +29,11 @@
             <div class="card_login">
                 <div class="card-header">
                     <h3>Inicio de sesion</h3>
-
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
                 </div>
                 <div class="card-body">
                     <form action="{% url 'iniciarSesion' %}" method="POST">
@@ -38,10 +42,10 @@
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                    <i class="fas fa-envelope"></i>
+                                    <i class="fas fa-user"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" required id="nombreUsuario" name="nombreUsuario" placeholder="Email">
+                            <input type="text" class="form-control" required id="nombreUsuario" name="nombreUsuario" placeholder="Nombre usuario">
                         </div>
 
                         <div class="input-group form-group">
