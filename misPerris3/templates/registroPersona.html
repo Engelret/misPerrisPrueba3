@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{ % url 'registroPersona/crearPersona' % }" method="POST">
+                    <form action="/registroPersona/crearPersona/" method="POST">
                         {% csrf_token %}
 
                         <div class="row">
@@ -186,7 +186,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <input type="submit" class="btn float-left btn-primary" value="Guardar">
+                                <input type="submit" class="btn float-left btn-primary" value="Registrar">
                             </div>
                         </div>
 
