@@ -35,7 +35,7 @@ $("#region").change(function () {
 
 var estados = ["Rescatado", "Disponible", "Adoptado"]
 
-var vivienda = ["Rescatado", "Disponible", "Adoptado"]
+var vivienda = ["Casa patio grande", "Casa patio pequeño", "Casa sin patio", "Departamento"]
 
 var chile = {
     "regiones": [{
