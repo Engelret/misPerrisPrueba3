@@ -1,11 +1,18 @@
 $(function () {
     cargarRegion()
     cargarEstados()
+    cargarVivienda()
 })
 
 function cargarRegion() {
     chile.regiones.forEach(region => {
         $("#region").append('<option value="' + region.region + '">' + region.region + '</option>')
+    })
+}
+
+function cargarVivienda() {
+    vivienda.forEach(vivienda => {
+        $("#vivienda").append('<option value="'+vivienda+'">'+vivienda+'</option>')
     })
 }
 
@@ -27,6 +34,8 @@ $("#region").change(function () {
 })
 
 var estados = ["Rescatado", "Disponible", "Adoptado"]
+
+var vivienda = ["Rescatado", "Disponible", "Adoptado"]
 
 var chile = {
     "regiones": [{
