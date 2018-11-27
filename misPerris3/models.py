@@ -8,7 +8,7 @@ class Persona(models.Model):
     nombre = models.CharField(max_length = 100)
     fechaNac = models.CharField(max_length = 10)
     telefono = models.BigIntegerField()
-    nombreUsuario = models.CharField(max_length = 40, unique = True)
+    nombreUsuario = models.CharField(max_length = 40)
     contraseñaUsuario = models.CharField(max_length = 50)
     region = models.CharField(max_length = 60)
     comuna = models.CharField(max_length = 60)
