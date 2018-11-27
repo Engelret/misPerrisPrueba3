@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Usuario(models.Model):
+class Persona(models.Model):
     run = models.CharField(max_length = 10)
     correo = models.CharField(max_length = 60)
     nombre = models.CharField(max_length = 100)

@@ -17,6 +17,7 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'css/estilo_login.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
 
     <title>Registro</title>
 </head>
@@ -31,7 +32,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="/registroPersona/crearPersona" method="POST">
+                    <form action="{ % url 'registroPersona/crearPersona' %}" method="POST">
                         {% csrf_token %}
 
                         <div class="row">
@@ -150,7 +151,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <select name="region" id="region" class="form-control">
+                                    <select id="regiones" class="form-control">
                                         <option hidden value="default">Seleccione region</option>
                                     </select>
                                 </div>
@@ -163,7 +164,7 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <select name="comuna" id="comuna" class="form-control">
+                                    <select id="comunas" class="form-control">
                                         <option hidden value="default">Seleccione comuna</option>
                                     </select>
                                 </div>

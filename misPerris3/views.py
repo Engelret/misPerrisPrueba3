@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Usuario
+from .models import Persona
 
 
 # Create your views here.
@@ -9,18 +9,23 @@ def index(request):
 
 
 def registroPersona(request):
-    return render(request,'registroPersona.html',{})
+    return render(request,'registroPersona.html',{'persona': Persona.objects.all()})
 
 def crearPersona(request):
-    nombres = request.POST.get('nombres','')
-    apellidos = request.POST.get('apellidos','')
-    email = request.POST.get('email','')
-    contrasenia = request.POST.get('contrasenia','')
-    reContrasenia = request.POST.get('reContrasenia','')
+    run = request.POST.get('run','')
+    correo = request.POST.get('correo','')
+    nombre = request.POST.get('nombre','')
+    fechaNac = request.POST.get('fechaNac','')
+    telefono = request.POST.get('telefono','')
+    nombreUsuario = request.POST.get('nombreUsuario','')
+    contraseñaUsuario = request.POST.get('contraseñaUsuario','')
+    region = request.POST.get('region','')
+    comuna = request.POST.get('comuna','')
+    vivienda = request.POST.get('vivienda','')
 
-    persona = Persona(nombres = nombres,apellidos = apellidos,email=email,contrasenia=contrasenia,reContrasenia=reContrasenia)
+    persona = Persona(run=run ,correo=correo ,nombre=nombre ,fechaNac=fechaNac ,telefono=telefono ,nombreUsuario=nombreUsuario ,contraseñaUsuario=contraseñaUsuario ,region=region ,comuna=comuna ,vivienda=vivienda )
     persona.save()
-    return HttpResponse("nombre : "+nombres+" apellidos : "+apellidos+" email : "+email+" contraseña : "+contrasenia+" reContraseña : "+reContrasenia)
+    return HttpResponse("run : "+run+" correo : "+correo+" nombre : "+nombre+" fechaNac : "+fechaNac+" telefono : "+telefono+" nombreUsuario : "+nombreUsuario+" contraseñaUsuario : "+contraseñaUsuario+" region : "+region+" comuna : "+region+" vivienda : "+region)
 
 def login(request):
     return render(request,'login.html',{})
