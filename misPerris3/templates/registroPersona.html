@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="es-CL">
 
@@ -32,7 +31,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{ % url 'registroPersona/crearPersona' %}" method="POST">
+                    <form action="{% url 'registroPersona/crearPersona' %}" method="POST">
                         {% csrf_token %}
 
                         <div class="row">

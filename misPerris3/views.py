@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from .models import Persona
+
+from django.http import HttpResponse
+
+from .models import Persona, Rescatado
 
 
 # Create your views here.
