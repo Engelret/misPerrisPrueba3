@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
+
 from django.http import HttpResponse
 
 from .models import Persona, Rescatado
@@ -28,8 +28,7 @@ def crearPersona(request):
 
     persona = Persona(run=run ,correo=correo ,nombre=nombre ,fechaNac=fechaNac ,telefono=telefono ,nombreUsuario=nombreUsuario ,contraseñaUsuario=contraseñaUsuario ,region=region ,comuna=comuna ,vivienda=vivienda )
     persona.save()
-    
-    return redirect('index')
+    return HttpResponse("run : "+run+" correo : "+correo+" nombre : "+nombre+" fechaNac : "+fechaNac+" telefono : "+telefono+" nombreUsuario : "+nombreUsuario+" contraseñaUsuario : "+contraseñaUsuario+" region : "+region+" comuna : "+region+" vivienda : "+region)
 
 def login(request):
     return render(request,'login.html',{})
