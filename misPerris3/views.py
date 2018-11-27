@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
-
 from .models import Persona, Rescatado
+from django.contrib.auth.models import User, Group
+from django.contrib.auth import authenticate, logout, login as auth_login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.hashers import make_password
 
 
 # Create your views here.
@@ -28,8 +31,22 @@ def crearPersona(request):
 
     persona = Persona(run=run ,correo=correo ,nombre=nombre ,fechaNac=fechaNac ,telefono=telefono ,nombreUsuario=nombreUsuario ,contraseñaUsuario=contraseñaUsuario ,region=region ,comuna=comuna ,vivienda=vivienda )
     persona.save()
+
+    user = User.objects.create_user(nombreUsuario, correo, repassword)
+    user.save()
     
     return redirect('index')
 
 def login(request):
-    return render(request,'login.html',{})
+    return render(request,'login.html',{'usuarios': Persona.objects.all()})
+
+def iniciarSesion(request):
+    nombreUsuario = request.POST.get('nombreUsuario', '')
+    password = request.POST.get('passwordlogin', '')
+    user = authenticate(request, nombreUsuario=nombreUsuario, password=password)
+
+    if user is not None:
+        auth_login(request, user)
+        return redirect('index')
+    else:
+        return redirect('login')
