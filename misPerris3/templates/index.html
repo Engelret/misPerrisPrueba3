@@ -1,0 +1,357 @@
+{% load static %}
+
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+
+    <title>Mis perris</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(133, 212, 183)">
+        <div class="container">
+            
+            
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light " style= "background-color: rgb(133, 212, 183)">
+        <img class="img-fluid" src="{% static 'img/logo.png' %}" alt="LogoMisPerris">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> inicio </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> quienes somos </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> servicios </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> contactos </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/registroPersona/"> Registrar </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner fondo">
+          <div class="carousel-item active">
+            <img class="d-block w-100 altura-minima" src="{% static 'img/adoptados/tom.jpg' %}" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 altura-minima" src="{% static 'img/adoptados/Apolo.jpg' %}" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 altura-minima" src="{% static 'img/adoptados/Duque.jpg' %}" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
+      
+
+      <div class="container-fluid fondo">
+        <div class="row">
+          <div class="col-md-12 redes">
+            <img class="img-fluid rounded mx-auto  redes-icono" src="{% static 'img/redes_sociales/facebook.png' %}" alt="icoFacebook">
+            <img class="img-fluid rounded mx-auto  redes-icono" src="{% static 'img/redes_sociales/google.png' %}" alt="icoGoogle">
+            <img class="img-fluid rounded mx-auto  redes-icono" src="{% static 'img/redes_sociales/instagram.png' %}"  alt="icoInstagram">
+            <img class="img-fluid rounded mx-auto  redes-icono mail" src="{% static 'img/redes_sociales/mail.png' %}" alt="icoMail">
+          
+        </div>
+      </div>
+    </div>
+
+      <br>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    
+      <div class="col-md-6 info-derecha">
+        <h2>RESCATE</h2>
+        
+        <h4>ESTAPA UNO</h4>
+        <p> 
+          Rescatamos perros en situacion de peligro y/o abandono. Los rehabilitamos y los preparamos 
+          para buscarles un hogar.
+        </p>
+        <hr class="separador">
+        <img class="img-fluid" style="width: 60%; margin-bottom: 10px;" src="{% static 'img/info_lateral/RESCATE.jpg' %}" alt="rescateImg">
+        
+      </div>
+
+      <div class="col-md-6 info-izquierda">
+        <img class="img-fluid" style="width: 60%;"  src="{% static 'img/info_lateral/crowfunding.jpg' %}" alt="crowfundingImg">
+        <h2>CROWDFUNDING</h2>
+        <h4>FINANCIAMIENTO</h4>
+        <hr class="separador">
+        <p>
+          Sigue nuestras redes sociales para informarte acerca de las diversas campañas y
+          actividades que realizamos para obtener financiamiento para seguir ayudando
+        </p>
+      </div>
+
+  </div>
+
+  <button type="button" class="btn btn-outline-dark">Campañas</button>
+  <br>
+  
+
+</div>
+
+<br>
+
+
+<div class="container-fluid fondo-2">
+  <div class="row"> 
+    <div class="col-md-4">
+      <a href="{% static 'img/rescatados/oso.jpg' %}"  data-lightbox="Oso" data-title="Oso"><img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/oso.jpg' %}"  data-lighbox id="oso" alt="perroOso"> </a>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+                <button id="btnOso" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Oso"> Mas info</button>
+            </div>
+
+            <a href="{% static 'img/rescatados/maya.jpg' %}" data-lightbox="Maya" data-title="Maya"> <img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/maya.jpg' %}" id="maya" alt="perroMaya"> </a>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+              <button id="btnMaya" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Maya"> Mas info</button>
+            </div>
+
+            <a href="{% static 'img/rescatados/wifi.jpg' %}" data-lightbox="Wifi" data-title="Wifi"> <img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/wifi.jpg' %}" id="wifi" alt="perroWifi"> </a>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+              <button id="btnWifi" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Wifi"> Mas info</button>
+            </div>
+
+    </div>
+    <div class="col-md-4">
+      <a href="{% static 'img/rescatados/chocolate.jpg' %}" data-lightbox="Chocolate" data-title="Chocolate"><img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/chocolate.jpg' %}" alt="perroChocolate" id="chocolate"> </a>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+          <button id="btnChocolate" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Chocolate"> Mas info</button>
+        </div>
+
+        <a href="{% static 'img/rescatados/pexel.jpg' %}" data-lightbox="Pexel" data-title="Pexel"><img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/pexel.jpg' %}" id="pexel" alt="perroPexel"></a>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+          <button id="btnPexel" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Pexel  "> Mas info</button>
+        </div>
+      
+    </div> 
+    <div class="col-md-4">
+      <a href="{% static 'img/rescatados/bigotes.jpg' %}" data-lightbox="Bigotes" data-title="Bigotes"><img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/bigotes.jpg' %}" id="bigotes" alt="perroBigotes"></a>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+        <button id="btnBigotes" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Bigotes"> Mas info</button>
+      </div>
+
+      <a href="{% static 'img/rescatados/luna.jpg' %}" data-lightbox="Luna" data-title="Luna"><img class="img-fluid miniatura" style="margin-top: 10px" src="{% static 'img/rescatados/luna.jpg' %}" id="luna" alt="perroLuna"></a>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg">  Adoptar  </button>
+        <button id="btnLuna" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Luna"> Mas info</button>
+      </div>
+
+  </div>
+</div>
+
+
+
+<!--M O D A L-->
+<!--M O D A L-->
+<!--M O D A L-->
+
+
+<!-- Large modal -->
+
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true" id="modal">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <h2>Registro de elementos</h2>
+
+                                        <form action="#" id="formulario" method="GET">
+                                        <div class="row">
+
+                                            <div class="col-md-3">
+                                                <div class="nombre">Nombre
+                                                  <input type="text" class="form-control" name="nombre" required placeholder="ingrese su nombre" id="nombre">
+                                                  <small id="helpNombre" class="form-text text-muted"> Nombre completo </small>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="rut">Run
+                                                  <input type="text"  class="form-control" name="rut"  required placeholder="ingrese su run" id="rut">
+                                                  <small id="helpRun" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                              <div class="fechaNac">Fecha nacimiento
+                                                <input type="date" max="2001-12-31" class="form-control" name="fechaNac" required id="fechaNac">
+                                                <small id="helpFechaNac" class="form-text text-muted"> informacion </small>
+                                                
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="telContacto">Telefono contacto
+                                                  <input type="text" class="form-control" required name="telContacto" placeholder="ingrese su numero de telefono" id="telContacto">
+                                                  <small id="helpTelContacto" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">Email
+                                                    
+                                                    <input type="email" class="form-control" name="email" required placeholder="ingrese email" id="email">
+                                                    <small id="helpEmail" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="col-md-3">
+                                                <div class="form-group">Region
+                                                    <select name="regiones" required id="regiones" class="form-control">
+                                                    <option value="" label="vacio"></option>  
+                                                    </select>
+                                                    <small id="helpRegiones" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">Comuna
+                                                    <select name="comuna" required id="comunas" class="form-control"> 
+                                                        <option value="" label="vacio"></option>    
+                                                    </select>
+                                                    <small id="helpComunas" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+                                
+                                            <div class="col-md-3">
+                                                <div class="form-group">tipo de vivienda
+                                                    <select name="tipoVivienda" id="tipoVivienda" class="form-control">
+                                                        <option value="seleccionarPais">seleccionar pais</option>
+                                                        <option value="casPatioGrande">Casa con patio grande</option>
+                                                        <option value="casPatioPequeño">Casa con patio pequeño</option>
+                                                        <option value="casSinPatio">Casa sin patio</option>
+                                                        <option value="Departamento">Departamento</option>
+
+                                                    </select>
+                                                    <small id="helpTipoVivienda" class="form-text text-muted"> informacion </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                      <br>
+
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                                <button class="btn btn-danger btn-block" type="reset">limpiar</button>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                              <button class="btn btn-success btn-block" type="submit">registrar</button>
+                                            </div>
+                                          </div>
+                                        </form>
+                                  </div>
+
+                                        
+
+                                  <br>
+
+                                  <div class="container">
+                                        <h2>Adopciones en espera</h2>
+
+                                      <div class="row" id="elementos">
+                                          <h3 class="center-text"> sin elementos </h3>
+                                        <div class="col-md-4">
+                                          
+                                        </div>
+
+                                      </div>
+                                  </div>
+                                </div>
+                    
+                              </div>
+                            </div>
+                          </div>
+                     
+                      
+<!--M O D A L-->
+<!--M O D A L-->
+<!--M O D A L-->
+
+
+
+
+<footer class="footer">
+  <div class="container-fluid footer">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Desarrollo Web y Movil</h4>
+        </div>
+      </div>
+  </div>
+</footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.js' %}"></script>
+    <script src="{% static 'js/additional-methods.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+    <script src="{% static 'js/jquery.rut.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
