@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from .models import Persona
-from .models import Mascota
+from .models import Persona, Mascota
 
 
 class PersonaSerializer(serializers.HyperlinkedModelSerializer):
@@ -11,14 +10,4 @@ class PersonaSerializer(serializers.HyperlinkedModelSerializer):
 class MascotaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Mascota
-        fields = ('url','nombre','raza','foto','descripcion','estado') 
-
-
-
-
-
-
-
-
-
-    
+        fields = ('url','nombre')
