@@ -21,4 +21,4 @@ urlpatterns = [
     path('listaPerros/',views.listaPerros, name="listaPerros"),
     path('registroMascota/',views.registroMascota, name="registroMascota"),
     path('registroMascota/crearMascota/',views.crearMascota, name="crearMascota"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

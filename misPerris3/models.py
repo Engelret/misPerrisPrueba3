@@ -21,7 +21,7 @@ class Rescatado(models.Model):
     nombre = models.CharField(max_length = 60)
     raza = models.CharField(max_length = 40)
     foto = models.ImageField(upload_to = 'fotos/')
-    descripcion = models.CharField(max_length = 200)
+    descripcion = models.TextField(max_length = 200)
     estado = models.CharField(max_length = 50)
 
     def __str__(self):

@@ -18,10 +18,10 @@ def index(request):
    return render(request, 'index.html', {'persona': Persona.objects.all()})
 
 def listaPerros(request):
-    return render(request, 'listaPerros.html',{})
+    return render(request, 'listaPerros.html', {'rescatado': Rescatado.objects.all()})
 
 def registroPersona(request):
-    return render(request,'registroPersona.html',{'persona': Persona.objects.all()})
+    return render(request, 'registroPersona.html',{'persona': Persona.objects.all()})
 
 def crearPersona(request):
     run = request.POST.get('run','')
@@ -50,7 +50,7 @@ def registroMascota(request):
 def crearMascota(request):
     nombre = request.POST.get('nombre','')
     raza = request.POST.get('raza','')
-    foto = request.POST.get('foto','')
+    foto = request.FILES.get('foto','')
     descripcion = request.POST.get('descripcion','')
     estado = request.POST.get('estado','')
 
