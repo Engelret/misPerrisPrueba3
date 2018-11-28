@@ -38,7 +38,7 @@
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="fas fa-paw"></i>
                                         </span>
                                     </div>
                                     <input required class="form-control" type="text" name="nombre" id="nombre"
@@ -50,7 +50,7 @@
                                 <div class="input-group form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fas fa-id-card"></i>
+                                            <i class="fas fa-paw"></i>
                                         </span>
                                     </div>
                                     <input required class="form-control" type="text" name="raza" id="raza" placeholder="Raza mascota"
@@ -60,48 +60,55 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-group form-group">
-                                    <input required type="file"  id="foto" name="foto" placeholder="fotoPerro">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-group form-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="fas fa-calendar-alt"></i>
-                                        </span>
-                                    </div>
-                                    <textarea required class="form-control" name="descripcion" id="descripcion" cols="10"
-                                        rows="5"></textarea>
-                                </div>
-                            </div>
 
-                            <div class="row">
-
+                            
                                 <div class="col-md-6">
+                                        <div class="input-group form-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-align-left"></i>
+                                                </span>
+                                            </div>
+                                            <select name="estado" id="estado" class="form-control">
+                                                <option hidden value="default">Seleccione estado</option>
+                                            </select>
+        
+        
+                                        </div>
+                                    </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group form-group">
+                                    <input required  type="file" id="foto" name="foto" placeholder="fotoPerro">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6">
                                     <div class="input-group form-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
-                                                <i class="fas fa-building"></i>
+                                                <i class="fas fa-pencil-alt"></i>
                                             </span>
                                         </div>
-                                        <select name="estado" id="estado" class="form-control">
-                                            <option hidden value="default">Seleccione estado</option>
-                                        </select>
+                                        <textarea required class="form-control" name="descripcion" id="descripcion" cols="10"
+                                            rows="5"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <input type="submit" value="Aceptar" class="btn float-right login_btn">
-                                </div>
+                            <div class="col-md-6">
+                                <input type="submit" value="Aceptar" class="btn float-right login_btn">
                             </div>
-
                         </div>
 
-                    </form>
                 </div>
+
+                </form>
             </div>
         </div>
+    </div>
     </div>
 
 
