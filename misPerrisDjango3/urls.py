@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url, include
+from django.shortcuts import redirect
+
+def gllogin(request):
+    return redirect('index')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('misPerris3.urls')),
-    
+    url(r'^accounts/', include('allauth.urls')),
+     url(r'^accounts/profile/', gllogin),
 ]
