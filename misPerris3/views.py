@@ -9,7 +9,7 @@ from django.contrib.auth.hashers import make_password
 from django.shortcuts import redirect
 #import de api 
 from rest_framework import viewsets
-from .serializer import PersonaSerializer
+from .serializer import PersonaSerializer, MascotaSerializer
 
 
 # Create your views here.
@@ -43,6 +43,10 @@ def crearPersona(request):
     
     return redirect('index')
 
+
+def registroMascota(request):
+    return render(request,'registroMascota.html',{'mascota': Mascota.objects.all()})
+
 def crearMascota(request):
     nombre = request.POST.get('nombre','')
     raza = request.POST.get('raza','')
@@ -74,11 +78,12 @@ def cerrar_sesion(request):
     logout(request)
     return redirect('index')
 
-def registroMascota(request):
-    return render(request, 'registroMascota.html',{})
 
 class PersonaViewSet(viewsets.ModelViewSet):
     queryset = Persona.objects.all()
     serializer_class = PersonaSerializer
 
+class MascotaViewSet(viewsets.ModelViewSet):
+    queryset = Mascota.objects.all()
+    serializer_class = MascotaSerializer
 
