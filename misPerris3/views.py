@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from .models import Persona, Mascota
+from .models import Persona, Rescatado
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, logout, login as auth_login
 from django.contrib.auth.decorators import login_required
@@ -9,7 +9,7 @@ from django.contrib.auth.hashers import make_password
 from django.shortcuts import redirect
 #import de api 
 from rest_framework import viewsets
-from .serializer import PersonaSerializer, MascotaSerializer
+from .serializer import PersonaSerializer, RescatadoSerializer
 
 
 # Create your views here.
@@ -45,7 +45,7 @@ def crearPersona(request):
 
 
 def registroMascota(request):
-    return render(request,'registroMascota.html',{'mascota': Mascota.objects.all()})
+    return render(request,'registroMascota.html',{'rescatado': Rescatado.objects.all()})
 
 def crearMascota(request):
     nombre = request.POST.get('nombre','')
@@ -54,8 +54,8 @@ def crearMascota(request):
     descripcion = request.POST.get('descripcion','')
     estado = request.POST.get('estado','')
 
-    mascota = Mascota(nombre = nombre, raza = raza, foto = foto, descripcion = descripcion, estado = estado )
-    mascota.save()
+    rescatado = Rescatado(nombre = nombre, raza = raza, foto = foto, descripcion = descripcion, estado = estado )
+    rescatado.save()
     
     return redirect('registroMascota')
 
@@ -83,7 +83,7 @@ class PersonaViewSet(viewsets.ModelViewSet):
     queryset = Persona.objects.all()
     serializer_class = PersonaSerializer
 
-class MascotaViewSet(viewsets.ModelViewSet):
-    queryset = Mascota.objects.all()
-    serializer_class = MascotaSerializer
+class RescatadoViewSet(viewsets.ModelViewSet):
+    queryset = Rescatado.objects.all()
+    serializer_class = RescatadoSerializer
 
