@@ -44,13 +44,27 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"> contactos </a>
-      </li>
+      </li> 
+    </ul>
+    <ul class="navbar-nav">
+      {% if user.is_authenticated %}
+      <div class="dropdown">
+          <a class="nav-link dropdown-toggle username" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Bienvenid@ {{user}}
+          </a>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'cerrar_sesion' %}">cerrar sesion</a>
+          </li>                 
+      </div>
+      {% else %}
       <li class="nav-item">
         <a class="nav-link" href="login"> Iniciar</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://127.0.0.1:8000/registroPersona/"> Registrar </a>
       </li>
+      {% endif %}
     </ul>
   </div>
 </nav>

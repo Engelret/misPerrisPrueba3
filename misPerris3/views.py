@@ -6,12 +6,16 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, logout, login as auth_login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.hashers import make_password
+from django.shortcuts import redirect
+#import de api 
+from rest_framework import viewsets
+from .serializer import PersonaSerializer
 
 
 # Create your views here.
 
 def index(request):
-    return render(request,'index.html',{'nombre':"Engel",'elementos':["uno","dos","tres","cuatro"]})
+   return render(request, 'index.html', {'persona': Persona.objects.all()})
 
 
 def registroPersona(request):
@@ -32,21 +36,31 @@ def crearPersona(request):
     persona = Persona(run=run ,correo=correo ,nombre=nombre ,fechaNac=fechaNac ,telefono=telefono ,nombreUsuario=nombreUsuario ,contraseñaUsuario=contraseñaUsuario ,region=region ,comuna=comuna ,vivienda=vivienda )
     persona.save()
 
-    user = User.objects.create_user(nombreUsuario, correo, repassword)
+    user = User.objects.create_user(nombreUsuario, correo, contraseñaUsuario)
     user.save()
     
     return redirect('index')
 
-def login(request):
-    return render(request,'login.html',{'usuarios': Persona.objects.all()})
 
-def iniciarSesion(request):
-    nombreUsuario = request.POST.get('nombreUsuario', '')
+
+def login(request):
+    return render(request, 'login.html', {'usuarios': Persona.objects.all()})
+    
+def iniciar_sesion(request):
+    username = request.POST.get('username', '')
     password = request.POST.get('passwordlogin', '')
-    user = authenticate(request, nombreUsuario=nombreUsuario, password=password)
+    user = authenticate(request, username=username, password=password)
 
     if user is not None:
         auth_login(request, user)
         return redirect('index')
     else:
         return redirect('login')
+
+def cerrar_sesion(request):
+    logout(request)
+    return redirect('index')
+
+class PersonaViewSet(viewsets.ModelViewSet):
+    queryset = Persona.objects.all()
+    serializer_class = PersonaSerializer

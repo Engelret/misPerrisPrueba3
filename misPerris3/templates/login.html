@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{% url 'iniciarSesion' %}" method="POST">
+                    <form action="{% url 'iniciar_sesion' %}" method="POST">
                         {% csrf_token %}
 
                         <div class="input-group form-group">
@@ -45,7 +45,7 @@
                                     <i class="fas fa-user"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" required id="nombreUsuario" name="nombreUsuario" placeholder="Nombre usuario">
+                            <input type="text" class="form-control" required id="username" name="username" placeholder="Nombre usuario">
                         </div>
 
                         <div class="input-group form-group">
