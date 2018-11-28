@@ -149,6 +149,14 @@
     </div>
 
     <button type="button" class="btn btn-outline-dark">Campañas</button>
+
+    {% if user.is_authenticated %}
+    <button type="button" class="btn btn-outline-dark"><a href="/registroMascota/">Agregar mascotas</a> </button>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    <button type="button" class="btn btn-outline-dark"><a href="/listaPerros/"> Adoptar mascotas</a></button>
+    {% endif %}
     <br>
 
 
@@ -164,8 +172,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/oso.jpg' %}" data-lighbox id="oso" alt="perroOso"> </a>
 
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnOso" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Oso">
             Mas info</button>
         </div>
@@ -174,8 +180,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/maya.jpg' %}" id="maya" alt="perroMaya"> </a>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnMaya" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Maya">
             Mas info</button>
         </div>
@@ -184,8 +188,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/wifi.jpg' %}" id="wifi" alt="perroWifi"> </a>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnWifi" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Wifi">
             Mas info</button>
         </div>
@@ -196,8 +198,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/chocolate.jpg' %}" alt="perroChocolate" id="chocolate">          </a>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnChocolate" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover"
             title="Nombre: Chocolate"> Mas info</button>
         </div>
@@ -206,8 +206,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/pexel.jpg' %}" id="pexel" alt="perroPexel"></a>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnPexel" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Pexel  ">
             Mas info</button>
         </div>
@@ -218,8 +216,6 @@
             style="margin-top: 10px" src="{% static 'img/rescatados/bigotes.jpg' %}" id="bigotes" alt="perroBigotes"></a>
 
         <div class="btn-group">
-          <button type="button" class="btn btn-light btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg"> Adoptar
-          </button>
           <button id="btnBigotes" data-trigger="focus" type="button" class="btn btn-info btn-lg btn-block" data-toggle="popover" title="Nombre: Bigotes">
             Mas info</button>
         </div>

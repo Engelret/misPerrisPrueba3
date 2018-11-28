@@ -17,6 +17,8 @@ from .serializer import PersonaSerializer
 def index(request):
    return render(request, 'index.html', {'persona': Persona.objects.all()})
 
+def listaPerros(request):
+    return render(request, 'listaPerros.html',{})
 
 def registroPersona(request):
     return render(request,'registroPersona.html',{'persona': Persona.objects.all()})
@@ -61,6 +63,11 @@ def cerrar_sesion(request):
     logout(request)
     return redirect('index')
 
+def registroMascota(request):
+    return render(request, 'registroMascota.html',{})
+
 class PersonaViewSet(viewsets.ModelViewSet):
     queryset = Persona.objects.all()
     serializer_class = PersonaSerializer
+
+

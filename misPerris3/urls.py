@@ -17,4 +17,6 @@ urlpatterns = [
     path('login/iniciar_sesion/', views.iniciar_sesion, name="iniciar_sesion"),
     path('login/cerrar_sesion/', views.cerrar_sesion, name="cerrar_sesion"),
     path('api/', include(router.urls)),
+    path('listaPerros/',views.listaPerros, name="listaPerros"),
+    path('registroMascota/',views.registroMascota, name="registroMascota"),
 ]
