@@ -10,17 +10,19 @@
     border-radius: 10px;
 }
 
+.nav-link:hover{
+    color: black;
+}
+
 .nav-link{
     text-align: center;
     font-weight: 600;
-    
+    color: white;
 }
 
 .nav-item{
     background-color: rgb(109, 204, 170)
 }
-
-
 
 .fondo{
     margin-top: 0px;
@@ -47,9 +49,7 @@
 
 
 .negro{
-    
     background-color: rgb(0, 0, 0)
-
 }
 
 .redes{
