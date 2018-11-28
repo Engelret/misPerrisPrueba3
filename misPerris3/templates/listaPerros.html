@@ -77,8 +77,14 @@
 
     <!-- Fin Header -->
 
+    <div>
+        <h2 >Galeria de mascotas en adopcion </h2>
+    </div>
+
+
+
     <!-- Grid row -->
-    <div class="row">
+    <div style="padding-top: 5px;" class="row">
 
         <!-- Grid column -->
         <div class="col-lg-4 col-md-12 mb-4">
@@ -101,17 +107,13 @@
 
                         <!--Footer-->
                         <div class="modal-footer justify-content-center">
-                            <span class="mr-4">Nombre:</span>
-                            <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
-                            <!--Twitter-->
-                            <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
-                            <!--Google +-->
-                            <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"></i></a>
-                            <!--Linkedin-->
-                            <a type="button" class="btn-floating btn-sm btn-ins"><i class="fa fa-linkedin"></i></a>
+                            <span class="mr-4">Nombre: <!--llamar a nombre perro --> </span>
+                            <span class="mr-4">Raza: <!--llamar a descrpcion perro --> </span>
+                            <span class="mr-4">Descrpcion: <!--llamar a raza perro --></span>
 
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                Launch demo modal
+                            <!-- abrir modal de adoptar -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adoptar">
+                                Adoptar
                             </button>
 
                         </div>
@@ -134,7 +136,7 @@
 
 
     <!-- modal mensaje de adoptado -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="adoptar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
