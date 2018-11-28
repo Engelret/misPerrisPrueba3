@@ -9,6 +9,9 @@
     color: white;
     border-radius: 10px;
 }
+.embed-responsive-16by9::before{
+    padding-top: 0%;
+}
 
 .nav-link:hover{
     color: black;

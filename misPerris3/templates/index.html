@@ -151,11 +151,11 @@
     <button type="button" class="btn btn-outline-dark">Campañas</button>
 
     {% if user.is_authenticated %}
-    <button type="button" class="btn btn-outline-dark"><a href="/registroMascota/">Agregar mascotas</a> </button>
+    <a href="/registroMascota/"> <button type="button" class="btn btn-outline-dark">Agregar mascotas </button> </a>
     {% endif %}
 
     {% if user.is_authenticated %}
-    <button type="button" class="btn btn-outline-dark"><a href="/listaPerros/"> Adoptar mascotas</a></button>
+    <a href="/listaPerros/"><button type="button" class="btn btn-outline-dark">Adoptar mascotas</button> </a>
     {% endif %}
     <br>
 

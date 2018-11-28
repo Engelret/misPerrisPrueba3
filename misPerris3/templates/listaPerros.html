@@ -4,76 +4,164 @@
 <html lang="es-CL">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-  <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
-  <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
 
-  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 
 
-  <title>Mis perris</title>
+    <title>Mis perris</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(133, 212, 183)">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(133, 212, 183)">
+        <div class="container">
 
+
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(133, 212, 183)">
+        <img class="img-fluid" src="{% static 'img/logo.png' %}" alt="LogoMisPerris">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"> inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> quienes somos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> servicios </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> contactos </a>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li style="margin-top: 10px; margin-left: 10px;">
+                    <h6>Bienvenid@ {{user}}</h6>
+                </li>
+                {% endif %}
+
+
+            </ul>
+
+            {% if user.is_authenticated %}
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cerrar_sesion' %}">cerrar sesion</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Iniciar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/registroPersona/">Registrar</a>
+                </li>
+
+            </ul>
+
+            {% endif %}
+
+        </div>
+    </nav>
+
+    <!-- Fin Header -->
+
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+            <!--Modal: Name-->
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+
+                    <!--Content-->
+                    <div class="modal-content">
+
+                        <!--Body-->
+                        <div class="modal-body mb-0 p-0">
+
+                            <div class="embed-responsive z-depth-1-half">
+                                <img class="img-fluid miniatura" src="{% static 'img/rescatados/oso.jpg' %}" alt="">
+                            </div>
+
+                        </div>
+
+                        <!--Footer-->
+                        <div class="modal-footer justify-content-center">
+                            <span class="mr-4">Nombre:</span>
+                            <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"></i></a>
+                            <!--Twitter-->
+                            <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
+                            <!--Google +-->
+                            <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"></i></a>
+                            <!--Linkedin-->
+                            <a type="button" class="btn-floating btn-sm btn-ins"><i class="fa fa-linkedin"></i></a>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Launch demo modal
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <!--/.Content-->
+
+                </div>
+            </div>
+            <!--Modal: Name-->
+
+            <a><img class="img-fluid z-depth-1" src="{% static 'img/rescatados/oso.jpg' %}" alt="oso" data-toggle="modal"
+                    data-target="#modal1"></a>
+
+        </div>
+        <!-- Grid column -->
 
     </div>
-  </nav>
-
-  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(133, 212, 183)">
-    <img class="img-fluid" src="{% static 'img/logo.png' %}" alt="LogoMisPerris">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/"> inicio </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> quienes somos </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> servicios </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> contactos </a>
-        </li>
-
-        {% if user.is_authenticated %}
-        <li style="margin-top: 10px; margin-left: 10px;">
-          <h6>Bienvenid@ {{user}}</h6>
-        </li>
-        {% endif %}
+    <!-- Grid column -->
 
 
-      </ul>
-
-      {% if user.is_authenticated %}
-        <ul class="navbar-nav">
-          
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'cerrar_sesion' %}">cerrar sesion</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="login">Iniciar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/registroPersona/">Registrar</a>
-            </li>
-          
-        </ul>
-        
-      {% endif %}
-
+    <!-- modal mensaje de adoptado -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adoptar perro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Solicitud de adopcion enviada!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
+    <!-- modal mensaje de adoptado -->
+
+
+
+
+
+    <!-- inicio footer -->
+
+
 
     <footer class="footer">
         <div class="container-fluid footer">
