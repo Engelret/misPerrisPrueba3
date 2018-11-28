@@ -17,7 +17,7 @@ class Persona(models.Model):
     def __str__(self):
         return "persona"
 
-class Rescatado(models.Model):
+class Mascota(models.Model):
     nombre = models.CharField(max_length = 60)
     raza = models.CharField(max_length = 40)
     foto = models.ImageField(upload_to = 'fotos/')
@@ -25,4 +25,4 @@ class Rescatado(models.Model):
     estado = models.CharField(max_length = 50)
 
     def __str__(self):
-        return "rescatados"
+        return "mascota"

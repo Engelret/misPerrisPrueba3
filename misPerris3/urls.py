@@ -7,6 +7,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'personas', views.PersonaViewSet)
+router.register(r'mascotas', views.MascotaViewSet)
 
 
 urlpatterns = [
@@ -18,5 +19,5 @@ urlpatterns = [
     path('login/cerrar_sesion/', views.cerrar_sesion, name="cerrar_sesion"),
     path('api/', include(router.urls)),
     path('listaPerros/',views.listaPerros, name="listaPerros"),
-    path('registroMascota/',views.registroMascota, name="registroMascota"),
-]
+    path('registroMascota/crearMascota',views.registroMascota, name="registroMascota"),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -63,6 +63,15 @@ margin-right: 320px;
     border-radius: .25rem;
 }
 
+.perro{
+    height: 400px;
+    width: 800px;
+}
+
+body {
+    color: white;
+}
+
 .social_icon span{
 font-size: 60px;
 margin-left: 5px;

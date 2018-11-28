@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
-from .models import Persona, Rescatado
+from .models import Persona, Mascota
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, logout, login as auth_login
 from django.contrib.auth.decorators import login_required
@@ -43,6 +43,17 @@ def crearPersona(request):
     
     return redirect('index')
 
+def crearMascota(request):
+    nombre = request.POST.get('nombre','')
+    raza = request.POST.get('raza','')
+    foto = request.POST.get('foto','')
+    descripcion = request.POST.get('descripcion','')
+    estado = request.POST.get('estado','')
+
+    mascota = Mascota(nombre = nombre, raza = raza, foto = foto, descripcion = descripcion, estado = estado )
+    mascota.save()
+    
+    return redirect('registroMascota')
 
 
 def login(request):
