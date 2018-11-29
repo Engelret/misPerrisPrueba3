@@ -25,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('misPerris3.urls')),
     url(r'^accounts/', include('allauth.urls')),
-     url(r'^accounts/profile/', gllogin),
+    url(r'^accounts/profile/', gllogin),
+    path('', include('pwa.urls')),
 ]

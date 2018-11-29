@@ -3,6 +3,8 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
+from django.views.generic import TemplateView
+from django.conf.urls import url, include
 
 
 router = routers.DefaultRouter()
@@ -21,4 +23,6 @@ urlpatterns = [
     path('listaPerros/',views.listaPerros, name="listaPerros"),
     path('registroMascota/',views.registroMascota, name="registroMascota"),
     path('registroMascota/crearMascota/',views.crearMascota, name="crearMascota"),
+    url(r'^manifest.json', (TemplateView.as_view(template_name="manifest.json", content_type='application/json', )), name='manifest.json'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

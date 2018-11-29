@@ -1,5 +1,6 @@
 {% load static %}
 
+{% load pwa %}
 <!doctype html>
 <html lang="es-CL">
 
@@ -15,7 +16,7 @@
 
   <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 
-  <link rel="manifest" href="{% static 'json/manifest.json' %}">
+  <link rel="manifest" href="/manifest.json">
 
 
   <title>Mis perris</title>
@@ -390,7 +391,6 @@
   <script src="{% static 'js/jquery.validate.js' %}"></script>
   <script src="{% static 'js/additional-methods.js' %}"></script>
   <script src="{% static 'js/lightbox.js' %}"></script>
-  <script src="{% static 'js/jquery.rut.js' %}"></script>
   <script src="{% static 'js/app.js' %}"></script>
 </body>
 

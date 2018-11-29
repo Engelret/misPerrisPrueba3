@@ -1,7 +1,11 @@
 {
-    "name": "Mis perris",
-    "short_name": "Perris",
-    "start_url": "/",
+  "name": "Mis Perris",
+  "short_name": "Mis Perris",
+  "description": "Rescate ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#0A0302",
     "icons": [
       {
         "src": "/static/img/icono/icon16x16.ico",
@@ -32,10 +36,11 @@
         "src": "/static/img/icono/icon128x128.ico",
         "sizes": "128x128",
         "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon144x144.ico",
+        "sizes": "144x144",
+        "type": "image/png"
       }
-    ],
-    "theme_color": "#000000",
-    "background_color": "#FFFFFF",
-    "display": "fullscreen",
-    "orientation": "portrait"
+    ]
   }

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'rest_framework',
+    'pwa',
 ]
 
 SITE_ID = 1
@@ -150,3 +151,5 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'misPerris3/media')
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, '', 'serviceworker.js')

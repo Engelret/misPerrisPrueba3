@@ -179,3 +179,15 @@ $(document).ready(function(){
     " deriva del latín (cohors) que significa (protector, guardián del corral)."
     , html:true})
 })
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/serviceworker.js')
+        .then(function() {
+            console.log('ServiceWorker registered!');
+        })
+        .catch(function(err) {
+            console.log('ServiceWorker failed :(', err);
+        });
+    });
+  }

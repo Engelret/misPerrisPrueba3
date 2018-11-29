@@ -93,6 +93,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">Estado</th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -103,6 +104,9 @@
                     <td>{{r.nombre}}</td>
                     <td>{{r.descripcion}}</td>
                     <td>{{r.estado}}</td>
+                    <td><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#adoptar">
+                        Adoptar
+                      </button></td>
                   </tr>
                   <tr>
                         {% endfor %} 
@@ -131,7 +135,7 @@
                     Solicitud de adopcion enviada!
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>
