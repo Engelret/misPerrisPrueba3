@@ -1,0 +1,41 @@
+{
+    "name": "Mis perris",
+    "short_name": "Perris",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/static/img/icono/icon16x16.ico",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon24x24.ico",
+        "sizes": "24x24",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon32x32.ico",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon48x48.ico",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon64x64.ico",
+        "sizes": "64x64",
+        "type": "image/png"
+      },
+      {
+        "src": "/static/img/icono/icon128x128.ico",
+        "sizes": "128x128",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }
