@@ -17,13 +17,16 @@
 
     <link rel="stylesheet" href="{% static 'css/estilo_login.css' %}">
     <link rel="shortcut icon" href="{% static 'img/icono/dog-bone.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 
     <title>Registro</title>
 </head>
 
 <body>
-
+    <a class="img_login" href="{% url 'index' %}">
+        <img src="{% static './img/logo.png' %}" alt="error-logo">
+    </a>
     <div class="container-fluid grid-block">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -53,7 +56,8 @@
                                             <i class="fas fa-id-card"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="run" id="run" placeholder="Ingrese run" onkeypress="return validarRun(event)">
+                                    <input required class="form-control" type="text" name="run" id="run" placeholder="Ingrese run"
+                                        onkeypress="return validarRun(event)">
                                 </div>
                             </div>
 
@@ -69,7 +73,8 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="nombre" placeholder="Ingrese nombre completo" onkeypress="return validarLetras(event)">
+                                    <input required class="form-control" type="text" name="nombre" placeholder="Ingrese nombre completo"
+                                        onkeypress="return validarLetras(event)">
                                 </div>
                             </div>
 
@@ -80,7 +85,8 @@
                                             <i class="fas fa-calendar-alt"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="fechaNac" id="fechaNac" placeholder="dd/mm/aaaa">
+                                    <input required class="form-control" type="text" name="fechaNac" id="fechaNac"
+                                        placeholder="dd/mm/aaaa">
                                 </div>
                             </div>
 
@@ -107,7 +113,8 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Ingrese usuario">
+                                    <input required class="form-control" type="text" name="nombreUsuario" id="nombreUsuario"
+                                        placeholder="Ingrese usuario">
                                 </div>
                             </div>
 
@@ -125,7 +132,8 @@
                                             <i class="fas fa-key"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="password" name="contraseñaUsuario" id="contraseñaUsuario" placeholder="Ingrese contraseña">
+                                    <input required class="form-control" type="password" name="contraseñaUsuario" id="contraseñaUsuario"
+                                        placeholder="Ingrese contraseña">
                                 </div>
                             </div>
 
@@ -136,7 +144,8 @@
                                             <i class="fas fa-key"></i>
                                         </span>
                                     </div>
-                                    <input required class="form-control" type="password" name="repassword" id="repassword" placeholder="Confirme contraseña">
+                                    <input required class="form-control" type="password" name="repassword" id="repassword"
+                                        placeholder="Confirme contraseña">
                                 </div>
                             </div>
 

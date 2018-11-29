@@ -50,6 +50,7 @@ margin-right: 320px;
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
     margin-right: 320px;
+    margin-top: 100px;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -61,6 +62,10 @@ margin-right: 320px;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+
+.img_login{
+position: fixed;
 }
 
 .perro{

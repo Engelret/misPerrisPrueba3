@@ -22,6 +22,10 @@
 </head>
 
 <body>
+    <a class="img_login" href="{% url 'index' %}">
+        <img src="{% static './img/logo.png' %}" alt="error-logo">
+    </a>
+
     <div class="container-fluid grid-block">
         <div class="d-flex justify-content-center h-100">
             <div class="card_login perro">
@@ -61,25 +65,25 @@
 
                         <div class="row">
 
-                            
-                                <div class="col-md-6">
-                                        <div class="input-group form-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="fas fa-align-left"></i>
-                                                </span>
-                                            </div>
-                                            <select name="estado" id="estado" class="form-control">
-                                                <option hidden value="default">Seleccione estado</option>
-                                            </select>
-        
-        
-                                        </div>
-                                    </div>
 
                             <div class="col-md-6">
                                 <div class="input-group form-group">
-                                    <input required  type="file" id="foto" name="foto" placeholder="fotoPerro">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-align-left"></i>
+                                        </span>
+                                    </div>
+                                    <select name="estado" id="estado" class="form-control">
+                                        <option hidden value="default">Seleccione estado</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group form-group">
+                                    <input required type="file" id="foto" name="foto" placeholder="fotoPerro">
                                 </div>
                             </div>
                         </div>
@@ -87,18 +91,18 @@
 
                         <div class="row">
 
-                            <div class="col-md-6">
-                                    <div class="input-group form-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">
-                                                <i class="fas fa-pencil-alt"></i>
-                                            </span>
-                                        </div>
-                                        <textarea required class="form-control" name="descripcion" id="descripcion" cols="10"
-                                            rows="5"></textarea>
+                            <div class="col-md-12">
+                                <div class="input-group form-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
                                     </div>
+                                    <textarea required class="form-control" placeholder="Descripción mascota    " name="descripcion" id="descripcion" cols="10"
+                                        rows="5"></textarea>
                                 </div>
-                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-7">
                                 <input type="submit" value="Aceptar" class="btn float-right login_btn">
                             </div>
                         </div>
